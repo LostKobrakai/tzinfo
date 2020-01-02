@@ -1,6 +1,6 @@
 # Tzinfo
 
-**TODO: Add description**
+Implementation of the time zone information format (TZif) under RFC 8536.
 
 ## Installation
 
@@ -10,7 +10,7 @@ by adding `tzinfo` to your list of dependencies in `mix.exs`:
 ```elixir
 def deps do
   [
-    {:tzinfo, "~> 0.1.0"}
+    {:tzinfo, github: "LostKobrakai/tzinfo", branch: "master"}
   ]
 end
 ```
