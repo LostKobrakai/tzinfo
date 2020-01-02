@@ -23,7 +23,8 @@ defmodule Tzinfo.Parser do
             optional(:designations) => %{
               optional(start_index :: integer) => String.t()
             }
-          }
+          },
+          footer: Tzinfo.Posix.source_string()
         }
 
   @type counter_key :: :isut | :isstd | :leap | :time | :type | :char

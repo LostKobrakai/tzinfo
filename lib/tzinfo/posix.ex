@@ -10,6 +10,7 @@ defmodule Tzinfo.Posix do
   """
   import NimbleParsec
 
+  @type source_string :: String.t()
   @type abbr :: String.t()
   @type offset :: integer()
   @type julian_one_based :: %{
@@ -241,8 +242,8 @@ defmodule Tzinfo.Posix do
           }
         }}
   """
-  @spec parse(String.t()) :: {:ok, t} | {:error, String.t()}
-  @spec parse(String.t(), Keyword.t()) :: {:ok, t} | {:error, String.t()}
+  @spec parse(source_string) :: {:ok, t} | {:error, String.t()}
+  @spec parse(source_string, Keyword.t()) :: {:ok, t} | {:error, String.t()}
   def parse(str, opts \\ []) do
     try do
       case do_parse(str, context: opts) do
